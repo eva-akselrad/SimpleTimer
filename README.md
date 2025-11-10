@@ -41,7 +41,32 @@ Edit the `config.json` file to set your target date and customize the display:
 
 ## Usage
 
-Run the Flask application:
+### Option 1: Docker (Recommended)
+
+The easiest way to run SimpleTimer is with Docker:
+
+```bash
+# Using docker-compose
+docker-compose up -d
+
+# Or using Docker directly
+docker build -t simpletimer .
+docker run -p 5000:5000 -v $(pwd)/config.json:/app/config.json simpletimer
+```
+
+Then open your browser and navigate to:
+```
+http://localhost:5000
+```
+
+To stop the application:
+```bash
+docker-compose down
+```
+
+### Option 2: Run Locally
+
+Run the Flask application directly:
 ```bash
 python app.py
 ```
@@ -66,6 +91,9 @@ SimpleTimer/
 ├── app.py              # Flask application
 ├── config.json         # Configuration file
 ├── requirements.txt    # Python dependencies
+├── Dockerfile          # Docker configuration
+├── docker-compose.yml  # Docker Compose configuration
+├── .dockerignore       # Docker ignore file
 ├── templates/
 │   └── index.html     # HTML template
 └── static/
