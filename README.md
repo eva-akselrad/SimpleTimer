@@ -40,7 +40,7 @@ Edit the `config.json` file to set your target date and customize the display:
 - `description`: A subtitle or description text
 
 ## Usage
-
+### Demo Site: https://simple-timer-brown.vercel.app/
 ### Option 1: Docker (Recommended)
 
 The easiest way to run SimpleTimer is with Docker:
