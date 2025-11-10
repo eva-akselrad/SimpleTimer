@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">{{ title }}</h1>
+        <p class="description">{{ description }}</p>
+        
+        <div class="countdown">
+            <div class="time-unit">
+                <span id="days" class="number">0</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-unit">
+                <span id="hours" class="number">0</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="time-unit">
+                <span id="minutes" class="number">0</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="time-unit">
+                <span id="seconds" class="number">0</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

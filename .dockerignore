@@ -1,0 +1,13 @@
+# Docker ignore file
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.git
+.gitignore
+README.md
+.env
+.venv
+venv/
+ENV/
