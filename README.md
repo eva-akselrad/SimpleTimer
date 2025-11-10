@@ -51,6 +51,15 @@ Then open your browser and navigate to:
 http://localhost:5000
 ```
 
+### Development Mode
+
+To enable debug mode for development (not recommended for production):
+```bash
+FLASK_DEBUG=true python app.py
+```
+
+**Security Note:** Debug mode is disabled by default. Never enable debug mode in production as it may allow attackers to run arbitrary code.
+
 ## File Structure
 ```
 SimpleTimer/

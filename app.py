@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 import json
-from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -28,4 +28,6 @@ def get_target():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Debug mode should only be enabled in development
+    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(debug=debug_mode, host='0.0.0.0', port=5000)
